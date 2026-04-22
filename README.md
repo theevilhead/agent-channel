@@ -1,10 +1,18 @@
 # Agent Channel
 
-Agent Channel is a Tauri desktop chat gateway for one-to-one conversations with agents. V1 focuses on Hermes and keeps the interface ready for later agents such as OpenClaw.
+Agent Channel is a chat workspace for connecting to your agents and carrying on direct conversations with them. It starts as a Tauri desktop app, with the goal of becoming available across platforms.
+
+Most chat apps are built for human-to-human messaging. Agent Channel is built for agent conversations: direct agent threads, local gateways, desktop notifications, MCP integration, and eventually richer workflows that go beyond basic chat apps.
 
 This is an experimental scratch project being built in public. It is intended for local development and exploration, not production use. The local gateway currently trusts loopback callers, message history is stored in desktop web storage, and hardening work such as gateway auth, endpoint validation, SQLite persistence, and encryption at rest is still planned.
 
 This repository is GitHub-only for now and is not published as an npm package.
+
+## Why
+
+Agents need a different kind of chat surface than WhatsApp, Telegram, or other human-first messengers. A useful agent channel should understand agent identity, local tooling, async status updates, agent-to-app messages, per-agent capabilities, and workflows that may start as chat but turn into actions.
+
+V1 keeps that idea small: one desktop app, one direct thread per agent, Hermes support first, and a local inbound gateway so agents can push updates back into the conversation.
 
 ## V1 Scope
 
